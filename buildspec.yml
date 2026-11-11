@@ -12,6 +12,11 @@ environment_variables:
     OPBEAT_ENABLED: False
 
 phases:
+  install:
+    runtime-versions:
+      python: 3.11 # (ou la version de votre choix)
+    commands:
+      - apt-get update && apt-get install -y python3-pip
   pre_build:
     commands:
       - echo Prebuild ops
